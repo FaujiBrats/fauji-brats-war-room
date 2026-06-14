@@ -1,44 +1,37 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
+<title>Fauji Brats Cricket Club</title>
 
-<title>
-Fauji Brats Cricket Club
-</title>
+<link rel="stylesheet" href="css/style.css">
 
 <link
 rel="stylesheet"
-href="css/style.css">
-
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-rel="stylesheet">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- =========================
+NAVBAR
+========================= -->
 
 <nav class="navbar">
 
 <div class="brand">
 
-<img
-src="assets/logo.png"
-class="logo">
+<img src="assets/logo.png" class="logo">
 
-<div>
+<div class="brand-text">
 
 <h2>FAUJI BRATS</h2>
-
 <span>CRICKET CLUB</span>
 
 </div>
@@ -47,33 +40,21 @@ class="logo">
 
 <div class="nav-links">
 
-<a href="#home">HOME</a>
-
-<a href="#register">REGISTER</a>
-
-<a href="#players">PLAYERS</a>
-
-<a href="#suggestions">SUGGESTIONS</a>
-
-<a href="#about">ABOUT US</a>
+<a href="#home">Home</a> <a href="#kit">Kit</a> <a href="#register">Register</a> <a href="#players">Players</a> <a href="#suggestions">Suggestions</a> <a href="#stats">Stats</a>
 
 </div>
 
-<a
-href="#register"
-class="join-btn">
-
-JOIN THE BRATS
-
+<a href="#register" class="join-btn">
+Join The Brats
 </a>
 
 </nav>
 
-<!-- HERO -->
+<!-- =========================
+HERO
+========================= -->
 
-<section
-id="home"
-class="hero">
+<section id="home" class="hero">
 
 <div class="hero-overlay">
 
@@ -90,7 +71,15 @@ CRICKET CLUB
 </h2>
 
 <p class="motto">
+
 RESPECT ALL. FEAR NONE.
+
+</p>
+
+<p class="hero-description">
+
+Discipline • Brotherhood • Cricket • Victory
+
 </p>
 
 <div class="hero-buttons">
@@ -117,13 +106,15 @@ VIEW PLAYERS
 
 </section>
 
-<!-- KIT SECTION -->
+<!-- =========================
+KIT SECTION
+========================= -->
 
-<section class="kit-section">
+<section id="kit" class="kit-section">
 
 <h2 class="section-title">
 
-OUR KIT
+OUR OFFICIAL KIT
 
 </h2>
 
@@ -131,25 +122,43 @@ OUR KIT
 
 <div class="kit-card">
 
-<img src="assets/jersey.png">
+<img
+src="assets/jersey.png"
+alt="Jersey">
 
-<h3>Official Jersey</h3>
+<h3>Official Match Jersey</h3>
+
+<p>
+Premium Tactical Cricket Jersey
+</p>
 
 </div>
 
 <div class="kit-card">
 
-<img src="assets/trackpant.png">
+<img
+src="assets/trackpant.png"
+alt="Track Pant">
 
 <h3>Track Pant</h3>
 
+<p>
+Training & Travel Collection
+</p>
+
 </div>
 
 <div class="kit-card">
 
-<img src="assets/cap.png">
+<img
+src="assets/cap.png"
+alt="Cap">
 
-<h3>Premium Cap</h3>
+<h3>Premium Club Cap</h3>
+
+<p>
+Official Fauji Brats Headwear
+</p>
 
 </div>
 
@@ -157,9 +166,13 @@ OUR KIT
 
 </section>
 
-<!-- REGISTRATION + SUGGESTIONS -->
+<!-- =========================
+REGISTRATION + SUGGESTIONS
+========================= -->
 
 <section class="main-grid">
+
+<!-- LEFT -->
 
 <div
 id="register"
@@ -167,15 +180,15 @@ class="registration-box">
 
 <h2>
 
-<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-user-plus"></i>
 
 PLAYER REGISTRATION
 
 </h2>
 
-<p>
+<p class="sub-heading">
 
-Join the Fauji Brats Family
+Become a part of the Fauji Brats Brotherhood
 
 </p>
 
@@ -183,7 +196,8 @@ Join the Fauji Brats Family
 
 <input
 id="fullName"
-placeholder="Full Name">
+placeholder="Full Name"
+required>
 
 <input
 id="nickName"
@@ -195,29 +209,47 @@ placeholder="Mobile Number">
 
 <input
 id="email"
-placeholder="Email ID">
+placeholder="Email Address">
 
 <select id="playerType">
 
-<option value="">Select Player Type</option>
+<option value="">
+Select Player Type
+</option>
 
-<option>Opening Batsman</option>
+<option>
+Opening Batsman
+</option>
 
-<option>Middle Order Batsman</option>
+<option>
+Middle Order Batsman
+</option>
 
-<option>Finisher</option>
+<option>
+Finisher
+</option>
 
-<option>Fast Bowler</option>
+<option>
+Fast Bowler
+</option>
 
-<option>Medium Pacer</option>
+<option>
+Medium Pacer
+</option>
 
-<option>Spinner</option>
+<option>
+Spinner
+</option>
 
-<option>Wicket Keeper</option>
+<option>
+Wicket Keeper
+</option>
 
-<option>All Rounder</option>
+<option>
+All Rounder
+</option>
 
-</select>  
+</select>
 
 <input
 id="jerseyName"
@@ -229,7 +261,7 @@ placeholder="Jersey Number">
 
 <select id="jerseySize">
 
-<option>
+<option value="">
 Jersey Size
 </option>
 
@@ -256,11 +288,14 @@ Full Sleeve
 
 <select id="availability">
 
-<option>Available</option>
+<option>
+Available
+</option>
 
-<option>Not Available</option>
+<option>
+Not Available
+</option>
 
-</select>
 </select>
 
 <input
@@ -287,6 +322,8 @@ REGISTER PLAYER
 
 </div>
 
+<!-- RIGHT -->
+
 <div
 id="suggestions"
 class="suggestion-box">
@@ -295,37 +332,23 @@ class="suggestion-box">
 
 <i class="fa-solid fa-comment-dots"></i>
 
-ANONYMOUS SUGGESTIONS
+ANONYMOUS WAR ROOM
 
 </h2>
 
 <select id="category">
 
-<option>
-General
-</option>
-
-<option>
-Team Selection
-</option>
-
-<option>
-Batting Order
-</option>
-
-<option>
-Bowling Plan
-</option>
-
-<option>
-Captaincy
-</option>
+<option>General</option>
+<option>Team Selection</option>
+<option>Batting Order</option>
+<option>Bowling Plans</option>
+<option>Captaincy</option>
 
 </select>
 
 <textarea
 id="suggestion"
-placeholder="Share your anonymous thoughts...">
+placeholder="Share your thoughts anonymously...">
 </textarea>
 
 <button
@@ -344,21 +367,15 @@ WHY JOIN FAUJI BRATS?
 
 <ul>
 
-<li>
-Discipline & Brotherhood
-</li>
+<li>Discipline & Brotherhood</li>
 
-<li>
-Develop & Grow
-</li>
+<li>Professional Cricket Environment</li>
 
-<li>
-Compete & Win
-</li>
+<li>Competitive Matches</li>
 
-<li>
-Lifelong Memories
-</li>
+<li>Lifetime Memories</li>
+
+<li>Elite Tactical Team Culture</li>
 
 </ul>
 
@@ -368,29 +385,27 @@ Lifelong Memories
 
 </section>
 
-<!-- PLAYER DIRECTORY -->
+<!-- =========================
+PLAYER DIRECTORY
+========================= -->
 
 <section
 id="players"
 class="player-section">
 
-<div class="player-header">
-
-<h2>
+<h2 class="section-title">
 
 PLAYER DIRECTORY
 
 </h2>
 
-</div>
-
 <div
-id="playerContainer"
-class="player-grid">
+id="playersGrid"
+class="players-grid">
 
 <div class="loading">
 
-Players Loading...
+Loading Players...
 
 </div>
 
@@ -398,10 +413,72 @@ Players Loading...
 
 </section>
 
-<!-- CLUB STATS -->
+<!-- =========================
+RANKINGS
+========================= -->
+
+<section class="ranking-section">
+
+<h2 class="section-title">
+
+CLUB LEADERBOARDS
+
+</h2>
+
+<div class="ranking-grid">
+
+<div class="ranking-card">
+
+<h3>
+Top Batsmen
+</h3>
+
+<ul>
+
+<li>Coming Soon</li>
+
+</ul>
+
+</div>
+
+<div class="ranking-card">
+
+<h3>
+Top Bowlers
+</h3>
+
+<ul>
+
+<li>Coming Soon</li>
+
+</ul>
+
+</div>
+
+<div class="ranking-card">
+
+<h3>
+Top All Rounders
+</h3>
+
+<ul>
+
+<li>Coming Soon</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+STATS
+========================= -->
 
 <section
-id="about"
+id="stats"
 class="stats-section">
 
 <div class="stats-grid">
@@ -442,7 +519,7 @@ class="stats-section">
 
 <div class="footer-motto">
 
-WE DON'T JUST PLAY CRICKET.
+WE DON'T JUST PLAY CRICKET.<br>
 
 WE LIVE THE SPIRIT OF A SOLDIER.
 
@@ -459,4 +536,5 @@ WE LIVE THE SPIRIT OF A SOLDIER.
 <script src="js/app.js"></script>
 
 </body>
+
 </html>
