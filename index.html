@@ -72,21 +72,61 @@
 <section id="register">
 
 <h2 class="section-title">
-Player Registration
-</h2>
-
 <form id="playerForm">
+
+<h3>Player Registration</h3>
 
 <input id="fullName" placeholder="Full Name" required>
 
+<input id="nickName" placeholder="Nick Name">
+
 <input id="mobile" placeholder="Mobile Number">
 
-<input id="jerseyName" placeholder="Jersey Name">
+<input id="email" placeholder="Email">
+
+<select id="playerType">
+<option value="">Select Player Type</option>
+<option>Batsman</option>
+<option>Bowler</option>
+<option>All Rounder</option>
+<option>Wicket Keeper</option>
+</select>
+
+<input id="jerseyName" placeholder="Jersey Print Name">
 
 <input id="jerseyNumber" placeholder="Jersey Number">
 
+<select id="jerseySize">
+<option value="">Jersey Size</option>
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>XXL</option>
+<option>XXXL</option>
+</select>
+
+<select id="sleeveType">
+<option>Half Sleeve</option>
+<option>Full Sleeve</option>
+</select>
+
+<select id="availability">
+<option>Available</option>
+<option>Not Available</option>
+</select>
+
+<input id="pantSize" placeholder="Pant Size">
+
+<input id="capSize" placeholder="Cap Size">
+
 <button type="submit">
 Register
+</button>
+
+</form>
+
 </button>
 
 </form>
