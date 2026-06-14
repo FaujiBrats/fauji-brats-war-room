@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fauji Brats War Room</title>
+</head>
+<body>
+
+<h1>FAUJI BRATS WAR ROOM</h1>
+
+<h2>Player Registration</h2>
+
+<form id="playerForm">
+
+<input id="fullName" placeholder="Full Name"><br><br>
+
+<input id="mobile" placeholder="Mobile Number"><br><br>
+
+<input id="jerseyName" placeholder="Jersey Name"><br><br>
+
+<input id="jerseyNumber" placeholder="Jersey Number"><br><br>
+
+<button type="submit">
+Register
+</button>
+
+</form>
+
+<script>
+
+const API_URL =
+"https://script.google.com/macros/s/AKfycbxT1YvD5gFZjsKPlANVNF8acUP61jicdphoDvdvyAAW36G3P9CyYX3PH32VRZ00pC-eTA/exec";
+
+document
+.getElementById("playerForm")
+.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const payload = {
+
+fullName:
+document.getElementById("fullName").value,
+
+mobile:
+document.getElementById("mobile").value,
+
+jerseyName:
+document.getElementById("jerseyName").value,
+
+jerseyNumber:
+document.getElementById("jerseyNumber").value
+
+};
+
+await fetch(API_URL,{
+method:"POST",
+body:JSON.stringify(payload)
+});
+
+alert("Registration Submitted");
+
+});
+
+</script>
+
+</body>
+</html>
