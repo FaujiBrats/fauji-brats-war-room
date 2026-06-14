@@ -14,14 +14,38 @@ action:"registerPlayer",
 fullName:
 document.getElementById("fullName").value,
 
+nickName:
+document.getElementById("nickName").value,
+
 mobile:
 document.getElementById("mobile").value,
+
+email:
+document.getElementById("email").value,
+
+playerType:
+document.getElementById("playerType").value,
 
 jerseyName:
 document.getElementById("jerseyName").value,
 
 jerseyNumber:
-document.getElementById("jerseyNumber").value
+document.getElementById("jerseyNumber").value,
+
+jerseySize:
+document.getElementById("jerseySize").value,
+
+sleeveType:
+document.getElementById("sleeveType").value,
+
+availability:
+document.getElementById("availability").value,
+
+pantSize:
+document.getElementById("pantSize").value,
+
+capSize:
+document.getElementById("capSize").value
 
 };
 
