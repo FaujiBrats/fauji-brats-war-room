@@ -1,9 +1,9 @@
 :root{
-  --gold:#c8a045;
-  --dark:#050505;
-  --card:#111111;
-  --olive:#38422d;
-  --text:#f5f5f5;
+    --bg:#050505;
+    --card:#101010;
+    --gold:#d4af37;
+    --gold-light:#f0d878;
+    --border:rgba(212,175,55,.35);
 }
 
 *{
@@ -25,136 +25,95 @@ body{
 /* NAVBAR */
 
 .navbar{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:80px;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-  padding:0 40px;
+    padding:15px 60px;
 
-  background:rgba(0,0,0,.85);
-  backdrop-filter:blur(10px);
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(12px);
 
-  z-index:999;
+    border-bottom:1px solid var(--border);
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:15px;
+.menu{
+    display:flex;
+    gap:30px;
 }
 
-.logo{
-  height:55px;
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.3s;
 }
 
-.brand h2{
-  color:var(--gold);
-  font-size:22px;
+.menu a:hover{
+    color:var(--gold);
 }
 
-.brand span{
-  color:#ccc;
-  font-size:12px;
-}
-
-.nav-links{
-  display:flex;
-  gap:30px;
-}
-
-.nav-links a{
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-}
-
-.nav-links a:hover{
-  color:var(--gold);
-}
-
-.join-btn{
-  background:var(--gold);
-  color:black;
-  text-decoration:none;
-  padding:12px 22px;
-  border-radius:6px;
-  font-weight:bold;
+.btn{
+    background:var(--gold);
+    color:black;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 /* HERO */
 
 .hero{
-  height:100vh;
 
-  background:
-  linear-gradient(
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.75)
-  );
+    min-height:100vh;
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.85)
+    ),
+    url("../assets/jersey.png");
 
-  padding-top:80px;
-}
+    background-size:cover;
+    background-position:center;
 
-.hero-overlay{
-  max-width:900px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
 }
 
 .hero-logo{
-  width:150px;
-  margin-bottom:20px;
+    width:180px;
+    margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:90px;
-  color:white;
-  letter-spacing:3px;
+
+    font-size:6rem;
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
 }
 
 .hero h2{
-  color:var(--gold);
-  font-size:38px;
-  margin-top:10px;
+    font-size:2rem;
+    margin-top:20px;
 }
 
-.motto{
-  margin-top:20px;
-  font-size:22px;
-  letter-spacing:5px;
+.hero p{
+    margin-top:20px;
+    color:#bbb;
 }
-
-.hero-buttons{
-  margin-top:40px;
-}
-
-.primary-btn,
-.secondary-btn{
-  display:inline-block;
-  padding:15px 30px;
-  text-decoration:none;
-  margin:10px;
-  border-radius:8px;
-}
-
-.primary-btn{
-  background:var(--gold);
-  color:black;
-}
-
-.secondary-btn{
-  border:1px solid var(--gold);
-  color:var(--gold);
-}
-
 /* SECTION TITLE */
 
 .section-title{
@@ -166,164 +125,138 @@ body{
 
 /* KIT */
 
-.kit-section{
-  padding:80px 40px;
-}
-
 .kit-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+    padding:60px;
 }
 
-.kit-card{
-  background:var(--card);
-  border:1px solid #2a2a2a;
-  border-radius:15px;
-  overflow:hidden;
-  transition:.3s;
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    transition:.3s;
 }
 
-.kit-card:hover{
-  transform:translateY(-8px);
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 0 25px rgba(212,175,55,.2);
 }
 
-.kit-card img{
-  width:100%;
-  display:block;
+.card img{
+
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
 }
 
-.kit-card h3{
-  padding:20px;
-  text-align:center;
-  color:var(--gold);
-}
+.card h3{
 
+    text-align:center;
+    padding:20px;
+
+    color:white;
+}
 /* REGISTRATION + SUGGESTION */
 
 .main-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:30px;
 
-  padding:40px;
+    display:grid;
+
+    grid-template-columns:
+    2fr 1fr;
+
+    gap:30px;
+
+    padding:60px;
 }
 
-.registration-box,
-.suggestion-box{
-  background:#101010;
-  border:1px solid #262626;
-  border-radius:15px;
-  padding:30px;
-}
+.panel{
 
-.registration-box h2,
-.suggestion-box h2{
-  color:var(--gold);
-  margin-bottom:10px;
-}
+    background:var(--card);
 
-.registration-box p{
-  margin-bottom:25px;
-  color:#aaa;
-}
+    border:1px solid var(--border);
 
-form{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
+    border-radius:15px;
 
-input,
-select,
-textarea{
-  width:100%;
-  padding:15px;
-  background:#161616;
-  border:1px solid #333;
-  color:white;
-  border-radius:8px;
+    padding:30px;
 }
-
-textarea{
-  min-height:140px;
-  resize:none;
-}
-
-.submit-btn{
-  background:var(--gold);
-  color:black;
-  border:none;
-  padding:15px;
-  border-radius:8px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-form .submit-btn{
-  grid-column:span 2;
-}
-
-.why-box{
-  margin-top:30px;
-}
-
-.why-box h3{
-  color:var(--gold);
-  margin-bottom:15px;
-}
-
-.why-box ul{
-  padding-left:20px;
-}
-
-.why-box li{
-  margin-bottom:10px;
-}
-
 /* PLAYERS */
 
-.player-section{
-  padding:80px 40px;
-}
+<section id="players">
 
-.player-header{
-  margin-bottom:30px;
-}
+<h2 class="section-title">
+PLAYER DIRECTORY
+</h2>
 
-.player-header h2{
-  color:var(--gold);
-  font-size:36px;
-}
+<div id="playersGrid"
+class="players-grid">
 
-.player-grid{
-  display:grid;
-  grid-template-columns:
-  repeat(auto-fill,minmax(250px,1fr));
+Loading Players...
 
-  gap:25px;
+</div>
+
+</section>
+
+/* PLAYERS CARD */
+
+.players-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+padding:50px;
 }
 
 .player-card{
-  background:#121212;
-  border-radius:15px;
-  overflow:hidden;
-  border:1px solid #2a2a2a;
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:15px;
+
+overflow:hidden;
 }
 
 .player-card img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
+
+width:100%;
+height:280px;
+
+object-fit:cover;
 }
 
 .player-info{
-  padding:20px;
+
+padding:20px;
 }
 
 .player-info h3{
-  color:var(--gold);
-  margin-bottom:10px;
+
+color:var(--gold);
+
+margin-bottom:10px;
 }
 
 /* STATS */
