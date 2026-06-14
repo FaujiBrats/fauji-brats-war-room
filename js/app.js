@@ -81,3 +81,49 @@ body:JSON.stringify(payload)
 alert("Suggestion Submitted");
 
 });
+
+loadPlayers();
+
+async function loadPlayers(){
+
+const res =
+await fetch(
+API_URL + "?action=players"
+);
+
+const players =
+await res.json();
+
+let html = "";
+
+players.forEach(player=>{
+
+html += `
+
+<div class="player-card">
+
+<img src="${
+player["Photo URL"] ||
+'https://via.placeholder.com/300'
+}">
+
+<div class="player-info">
+
+<h3>${player["Full Name"]}</h3>
+
+<p>${player["Player Type"]}</p>
+
+<p>#${player["Jersey Number"]}</p>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+document.getElementById(
+"playersGrid"
+).innerHTML = html;
+}
